@@ -1,0 +1,15 @@
+# Pretext Self-Supervised Learning
+[2016] [Shuffle and Learn: Unsupervised Learning Using Temporal Order Verification](https://link.springer.com/chapter/10.1007/978-3-319-46448-0_32)
+[2017] [Unsupervised Representation Learning by Sorting Sequences](https://openaccess.thecvf.com/content_ICCV_2017/papers/Lee_Unsupervised_Representation_Learning_ICCV_2017_paper.pdf)
+[2017] [Self-Supervised Video Representation Learning With Odd-One-Out Networks](https://openaccess.thecvf.com/content_cvpr_2017/papers/Fernando_Self-Supervised_Video_Representation_CVPR_2017_paper.pdf)
+[2018] [Geometry guided convolutional neural networks for self-supervised video representation learning](https://ieeexplore.ieee.org/document/8578684).
+[2019] [Self-Supervised Spatiotemporal Learning via Video Clip Order Prediction](https://ieeexplore.ieee.org/document/8953292)
+[2019] [Self-Supervised Spatio-Temporal Representation Learning for Videos by Predicting Motion and Appearance Statistics](https://arxiv.org/abs/1904.03597)
+[2019] [Self-Supervised Spatiotemporal Feature Learning via Video Rotation Prediction](https://openaccess.thecvf.com/content_CVPR_2019/papers/Xu_Self-Supervised_Spatiotemporal_Learning_via_Video_Clip_Order_Prediction_CVPR_2019_paper.pdf)
+[2019] [Video jigsaw: Unsupervised learning of spatiotemporal context for video action recognition](https://ieeexplore.ieee.org/document/8659002)
+[2019] [Self-supervised video representation learning with space-time cubic puzzles](https://dl.acm.org/doi/10.1609/aaai.v33i01.33018545)
+[2020] [Video Playback Rate Perception for Self-Supervised Spatio-Temporal Representation Learning](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yao_Video_Playback_Rate_Perception_for_Self-Supervised_Spatio-Temporal_Representation_Learning_CVPR_2020_paper.pdf)
+[2020] [SpeedNet: Learning the Speediness in Videos](https://openaccess.thecvf.com/content_CVPR_2020/papers/Benaim_SpeedNet_Learning_the_Speediness_in_Videos_CVPR_2020_paper.pdf)
+[2020] [Video representation learning by recognizing temporal transformations](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123730426.pdf)
+[2020] [Self-supervised Video Representation Learning by Pace Prediction](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123620494.pdf)
+[2021] [Self-Supervised Video Representation Learning with Constrained Spatiotemporal Jigsaw](https://www.ijcai.org/proceedings/2021/104)
