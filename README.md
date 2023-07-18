@@ -22,6 +22,7 @@ different modalities: video-only (V), video-text (V+T), video-audio (V+A), video
 recently, contrastive learning has become the most popular strategy.*
 
 ## Pre-Text Tasks
+### Action Recognition
 *Downstream evaluation of action recognition on pretext self-supervised learning measured by
 prediction accuracy. Top scores are in **bold**. Playback speed related tasks typically perform the best.*
 
@@ -41,8 +42,24 @@ prediction accuracy. Top scores are in **bold**. Playback speed related tasks ty
 | [OPN](https://openaccess.thecvf.com/content_ICCV_2017/papers/Lee_Unsupervised_Representation_Learning_ICCV_2017_paper.pdf)                   | Temporal Order                            | VGG-M           | UCF101                       | 59.80             | 23.80             |
 | [O3N](https://openaccess.thecvf.com/content_cvpr_2017/papers/Fernando_Self-Supervised_Video_Representation_CVPR_2017_paper.pdf)            | Temporal Order                            | AlexNet         | UCF101                       | 60.30             | 32.50             |
 | [ClipOrder](https://ieeexplore.ieee.org/document/8953292)         | Temporal Order                            | R3D             | UCF101                       | 72.40             | 30.90             |
-
-
+### Video Retrieval 
+*Performance for the downstream video retrieval task with top scores for each category in **bold**. K/U/H indicates using all three datasets for pre-training, i.e. Kinetics, UCF101, and HMDB51.*
+| Model                            | Category     | Subcategory          | Visual Backbone | Pre-train           | UCF101 R@5 | HMDB51 R@5 |
+|----------------------------------|--------------|----------------------|-----------------|---------------------|-----------|-----------|
+| [SpeedNet](https://openaccess.thecvf.com/content_CVPR_2020/papers/Benaim_SpeedNet_Learning_the_Speediness_in_Videos_CVPR_2020_paper.pdf)   | Pretext      | Speed                | S3D-G           | Kinetics            | 28.10     | --        |
+| [ClipOrder](https://ieeexplore.ieee.org/document/8953292)     | Pretext      | Temporal Order       | R3D             | UCF101              | 30.30     | 22.90     |
+| [OPN](https://openaccess.thecvf.com/content_ICCV_2017/papers/Lee_Unsupervised_Representation_Learning_ICCV_2017_paper.pdf)          | Pretext      | Temporal Order       | CaffeNet        | UCF101              | 28.70     | --        |
+| [CSJ](https://www.ijcai.org/proceedings/2021/104)              | Pretext      | Jigsaw               | R(2+3)D         | K/U/H               | 40.50     | --        |
+| [PRP](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yao_Video_Playback_Rate_Perception_for_Self-Supervised_Spatio-Temporal_Representation_Learning_CVPR_2020_paper.pdf)          | Pretext      | Speed                | R3D             | Kinetics            | 38.50     | 27.20     |
+| [Jenni et al.](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123730426.pdf)| Pretext      | Speed                | 3D R-18         | Kinetics            | 48.50     | --        |
+| [PacePred](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123620494.pdf)  | Pretext      | Speed                | R(2+1)D         | UCF101              | **49.70**     | **32.20**     |
+| [MemDPC-RGP](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480324.pdf)         | Generative   | Frame Prediction     | R(2+3)D         | Kinetics            | 40.40     | 25.70     |
+| [MemDPC-Flow](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480324.pdf)         | Generative   | Frame Prediction     | R(2+3)D         | Kinetics            | **63.20**     | **37.60**     |
+| [DSM](https://arxiv.org/abs/2009.05757)               | Contrastive  | Spatio-Temporal      | I3D             | Kinetics            | 35.20     | 25.90     |
+| [IIC](https://arxiv.org/abs/2010.15464)        | Contrastive  | Spatio-Temporal      | R-18            | UCF101              | 60.90     | 42.90     |
+| [SeLaVi](https://arxiv.org/pdf/2006.13662.pdf)           | Cross-Modal  | Video+Audio          | R(2+1)D         | Kinetics            | 68.60     | 47.60     |
+| [CoCLR](https://proceedings.neurips.cc/paper/2020/file/3def184ad8f4755ff269862ea77393dd-Paper.pdf)   | Contrastive  | View Augmentation    | S3D-G           | UCF101              | 70.80     | 45.80     |
+| [GDT](https://arxiv.org/abs/2003.04298)            | Cross-Modal  | Video+Audio          | R(2+1)D         | Kinetics            | **79.00**    | **51.70**     |
 
 ## Citation
 ```
