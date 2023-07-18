@@ -21,6 +21,7 @@ used in SSL. The year 2022 remains incomplete because a majority of the conferen
 different modalities: video-only (V), video-text (V+T), video-audio (V+A), video-text-audio (V+T+A). More
 recently, contrastive learning has become the most popular strategy.*
 
+# Training Tasks
 ## Pre-Text Tasks
 ### Action Recognition
 *Downstream evaluation of action recognition on pretext self-supervised learning measured by
@@ -42,7 +43,69 @@ prediction accuracy. Top scores are in **bold**. Playback speed related tasks ty
 | [OPN](https://openaccess.thecvf.com/content_ICCV_2017/papers/Lee_Unsupervised_Representation_Learning_ICCV_2017_paper.pdf)                   | Temporal Order                            | VGG-M           | UCF101                       | 59.80             | 23.80             |
 | [O3N](https://openaccess.thecvf.com/content_cvpr_2017/papers/Fernando_Self-Supervised_Video_Representation_CVPR_2017_paper.pdf)            | Temporal Order                            | AlexNet         | UCF101                       | 60.30             | 32.50             |
 | [ClipOrder](https://ieeexplore.ieee.org/document/8953292)         | Temporal Order                            | R3D             | UCF101                       | 72.40             | 30.90             |
-### Video Retrieval 
+
+### Video Retreival
+*Performance for the downstream video retrieval task with top scores for each category in **bold**. K/U/H indicates using all three datasets for pre-training, i.e. Kinetics, UCF101, and HMDB51.*
+
+| Model                            | Category     | Subcategory          | Visual Backbone | Pre-train           | UCF101 R@5 | HMDB51 R@5 |
+|----------------------------------|--------------|----------------------|-----------------|---------------------|-----------|-----------|
+| [SpeedNet](https://openaccess.thecvf.com/content_CVPR_2020/papers/Benaim_SpeedNet_Learning_the_Speediness_in_Videos_CVPR_2020_paper.pdf)   | Pretext      | Speed                | S3D-G           | Kinetics            | 28.10     | --        |
+| [ClipOrder](https://ieeexplore.ieee.org/document/8953292)     | Pretext      | Temporal Order       | R3D             | UCF101              | 30.30     | 22.90     |
+| [OPN](https://openaccess.thecvf.com/content_ICCV_2017/papers/Lee_Unsupervised_Representation_Learning_ICCV_2017_paper.pdf)          | Pretext      | Temporal Order       | CaffeNet        | UCF101              | 28.70     | --        |
+| [CSJ](https://www.ijcai.org/proceedings/2021/104)              | Pretext      | Jigsaw               | R(2+3)D         | K/U/H               | 40.50     | --        |
+| [PRP](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yao_Video_Playback_Rate_Perception_for_Self-Supervised_Spatio-Temporal_Representation_Learning_CVPR_2020_paper.pdf)          | Pretext      | Speed                | R3D             | Kinetics            | 38.50     | 27.20     |
+| [Jenni et al.](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123730426.pdf)| Pretext      | Speed                | 3D R-18         | Kinetics            | 48.50     | --        |
+| [PacePred](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123620494.pdf)  | Pretext      | Speed                | R(2+1)D         | UCF101              | **49.70**     | **32.20**     |
+
+## Generative Tasks
+
+### Action Recognition
+*Downstream evaluation of action recognition on  self-supervised learning measured by prediction accuracy for [Something-Something (SS)](https://developer.qualcomm.com/software/ai-datasets/something-something) and [Kinetics400 (Kinetics)](https://www.deepmind.com/open-source/kinetics). SS is a more temporally relevant dataset and therefore is more challenging.  Top scores for each category are in **bold** and second best scores \underline{underlined}.*
+
+| Model                                          | Category     | Subcategory | Visual Backbone      | Pre-Train                           | SS   | Kinetics |
+|-----------------------------------------------|--------------|-------------|---------------------|-------------------------------------|------|----------|
+| [BEVT](https://openaccess.thecvf.com/content/CVPR2022/papers/Wang_BEVT_BERT_Pretraining_of_Video_Transformers_CVPR_2022_paper.pdf)                   | Generative   | [MAE](https://arxiv.org/abs/2205.09113)         | [SWIN-B](https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_Swin_Transformer_Hierarchical_Vision_Transformer_Using_Shifted_Windows_ICCV_2021_paper.pdf)      | Kinetics+[ImageNet](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) | 71.4 | 81.1     |
+| [MAE](https://arxiv.org/abs/2205.09113)           | Generative   | [MAE](https://arxiv.org/abs/2205.09113)         | [ViT-H](https://arxiv.org/abs/2010.11929)    | Kinetics                            | 74.1 | 81.1     |
+| [MaskFeat](https://openaccess.thecvf.com/content/CVPR2022/papers/Wei_Masked_Feature_Prediction_for_Self-Supervised_Visual_Pre-Training_CVPR_2022_paper.pdf)                | Generative   |  [MAE](https://arxiv.org/abs/2205.09113)         | [MViT](https://openaccess.thecvf.com/content/ICCV2021/papers/Fan_Multiscale_Vision_Transformers_ICCV_2021_paper.pdf)       | Kinetics                            | 74.4 | **86.7**     |
+| [VideoMAE](https://arxiv.org/abs/2203.12602)              | Generative   |  [MAE](https://arxiv.org/abs/2205.09113)         | [ViT-L](https://arxiv.org/abs/2010.11929)      | ImageNet                            | 75.3 | 85.1     |
+| [MotionMAE](https://arxiv.org/abs/2210.04154)                     | Generative   |  [MAE](https://arxiv.org/abs/2205.09113)         | [ViT-B](https://arxiv.org/abs/2010.11929)     | Kinetics                            | **75.5** | 81.7     |
+
+### Video Retreival
+*Performance for the downstream video retrieval task with top scores for each category in **bold**. K/U/H indicates using all three datasets for pre-training, i.e. Kinetics, UCF101, and HMDB51.*
+| Model                            | Category     | Subcategory          | Visual Backbone | Pre-train           | UCF101 R@5 | HMDB51 R@5 |
+|----------------------------------|--------------|----------------------|-----------------|---------------------|-----------|-----------|
+| [MemDPC-RGP](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480324.pdf)         | Generative   | Frame Prediction     | R(2+3)D         | Kinetics            | 40.40     | 25.70     |
+| [MemDPC-Flow](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480324.pdf)         | Generative   | Frame Prediction     | R(2+3)D         | Kinetics            | **63.20**     | **37.60**     |
+
+## Contrastive Learning
+### Action Recognition
+*Downstream evaluation of action recognition on  self-supervised learning measured by prediction accuracy for [Something-Something (SS)](https://developer.qualcomm.com/software/ai-datasets/something-something) and [Kinetics400 (Kinetics)](https://www.deepmind.com/open-source/kinetics). SS is a more temporally relevant dataset and therefore is more challenging.  Top scores for each category are in **bold** and second best scores \underline{underlined}.*
+
+| Model                                          | Category     | Subcategory | Visual Backbone      | Pre-Train                           | SS   | Kinetics |
+|-----------------------------------------------|--------------|-------------|---------------------|-------------------------------------|------|----------|
+| [pSwaV](https://openaccess.thecvf.com/content/CVPR2021/papers/Feichtenhofer_A_Large-Scale_Study_on_Unsupervised_Spatiotemporal_Representation_Learning_CVPR_2021_paper.pdf)          | Contrastive  | View Aug.   | [R-50](https://arxiv.org/abs/1512.03385)                | Kinetics                            | 51.7 | 62.7     |
+| [pSimCLR](https://openaccess.thecvf.com/content/CVPR2021/papers/Feichtenhofer_A_Large-Scale_Study_on_Unsupervised_Spatiotemporal_Representation_Learning_CVPR_2021_paper.pdf)      | Contrastive  | View Aug.   | [R-50](https://arxiv.org/abs/1512.03385)                | Kinetics                            | 52.0 | 62.0     |
+| [pMoCo](https://openaccess.thecvf.com/content/CVPR2021/papers/Feichtenhofer_A_Large-Scale_Study_on_Unsupervised_Spatiotemporal_Representation_Learning_CVPR_2021_paper.pdf)         | Contrastive  | View Aug.   | [R-50](https://arxiv.org/abs/1512.03385)                | Kinetics                            | 54.4 | 69.0     |
+| [pBYOL](https://openaccess.thecvf.com/content/CVPR2021/papers/Feichtenhofer_A_Large-Scale_Study_on_Unsupervised_Spatiotemporal_Representation_Learning_CVPR_2021_paper.pdf)          | Contrastive  | View Aug.   | [R-50](https://arxiv.org/abs/1512.03385)                | Kinetics                            | **55.8** | **71.5**     |
+
+# Evaluation Tasks
+## Action Recognition (Kinetics and SS)
+*Downstream evaluation of action recognition on  self-supervised learning measured by prediction accuracy for [Something-Something (SS)](https://developer.qualcomm.com/software/ai-datasets/something-something) and [Kinetics400 (Kinetics)](https://www.deepmind.com/open-source/kinetics). SS is a more temporally relevant dataset and therefore is more challenging.  Top scores for each category are in **bold** and second best scores \underline{underlined}.*
+
+| Model                                          | Category     | Subcategory | Visual Backbone      | Pre-Train                           | SS   | Kinetics |
+|-----------------------------------------------|--------------|-------------|---------------------|-------------------------------------|------|----------|
+| [pSwaV](https://openaccess.thecvf.com/content/CVPR2021/papers/Feichtenhofer_A_Large-Scale_Study_on_Unsupervised_Spatiotemporal_Representation_Learning_CVPR_2021_paper.pdf)          | Contrastive  | View Aug.   | [R-50](https://arxiv.org/abs/1512.03385)                | Kinetics                            | 51.7 | 62.7     |
+| [pSimCLR](https://openaccess.thecvf.com/content/CVPR2021/papers/Feichtenhofer_A_Large-Scale_Study_on_Unsupervised_Spatiotemporal_Representation_Learning_CVPR_2021_paper.pdf)      | Contrastive  | View Aug.   | [R-50](https://arxiv.org/abs/1512.03385)                | Kinetics                            | 52.0 | 62.0     |
+| [pMoCo](https://openaccess.thecvf.com/content/CVPR2021/papers/Feichtenhofer_A_Large-Scale_Study_on_Unsupervised_Spatiotemporal_Representation_Learning_CVPR_2021_paper.pdf)         | Contrastive  | View Aug.   | [R-50](https://arxiv.org/abs/1512.03385)                | Kinetics                            | 54.4 | 69.0     |
+| [pBYOL](https://openaccess.thecvf.com/content/CVPR2021/papers/Feichtenhofer_A_Large-Scale_Study_on_Unsupervised_Spatiotemporal_Representation_Learning_CVPR_2021_paper.pdf)          | Contrastive  | View Aug.   | [R-50](https://arxiv.org/abs/1512.03385)                | Kinetics                            | 55.8 | 71.5     |
+| [BEVT](https://openaccess.thecvf.com/content/CVPR2022/papers/Wang_BEVT_BERT_Pretraining_of_Video_Transformers_CVPR_2022_paper.pdf)                   | Generative   | [MAE](https://arxiv.org/abs/2205.09113)         | [SWIN-B](https://openaccess.thecvf.com/content/ICCV2021/papers/Liu_Swin_Transformer_Hierarchical_Vision_Transformer_Using_Shifted_Windows_ICCV_2021_paper.pdf)      | Kinetics+[ImageNet](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf) | 71.4 | 81.1     |
+| [MAE](https://arxiv.org/abs/2205.09113)           | Generative   | [MAE](https://arxiv.org/abs/2205.09113)         | [ViT-H](https://arxiv.org/abs/2010.11929)    | Kinetics                            | 74.1 | 81.1     |
+| [MaskFeat](https://openaccess.thecvf.com/content/CVPR2022/papers/Wei_Masked_Feature_Prediction_for_Self-Supervised_Visual_Pre-Training_CVPR_2022_paper.pdf)                | Generative   |  [MAE](https://arxiv.org/abs/2205.09113)         | [MViT](https://openaccess.thecvf.com/content/ICCV2021/papers/Fan_Multiscale_Vision_Transformers_ICCV_2021_paper.pdf)       | Kinetics                            | 74.4 | 86.7     |
+| [VideoMAE](https://arxiv.org/abs/2203.12602)              | Generative   |  [MAE](https://arxiv.org/abs/2205.09113)         | [ViT-L](https://arxiv.org/abs/2010.11929)      | ImageNet                            | 75.3 | 85.1     |
+| [MotionMAE](https://arxiv.org/abs/2210.04154)                     | Generative   |  [MAE](https://arxiv.org/abs/2205.09113)         | [ViT-B](https://arxiv.org/abs/2010.11929)     | Kinetics                            | 75.5 | 81.7     |
+
+
+## Video Retrieval 
 *Performance for the downstream video retrieval task with top scores for each category in **bold**. K/U/H indicates using all three datasets for pre-training, i.e. Kinetics, UCF101, and HMDB51.*
 | Model                            | Category     | Subcategory          | Visual Backbone | Pre-train           | UCF101 R@5 | HMDB51 R@5 |
 |----------------------------------|--------------|----------------------|-----------------|---------------------|-----------|-----------|
