@@ -22,7 +22,12 @@
 * [2021] [Enhancing unsupervised video representation learning by decoupling the scene and the motion](https://arxiv.org/abs/2009.05757)
 
 # Generative Tasks
+* [2016] [Deep multi-scale video prediction beyond mean square error](https://arxiv.org/abs/1511.05440)
+* [2016] [Generating videos with scene dynamics](https://dl.acm.org/doi/pdf/10.5555/3157096.3157165)
+* [2017] [Dual Motion GAN for Future-Flow Embedded Video Prediction](https://openaccess.thecvf.com/content_ICCV_2017/papers/Liang_Dual_Motion_GAN_ICCV_2017_paper.pdf)
+* [2020] [Self-supervised motion representation via scattering local motion cues](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123590069.pdf)
 * [2021] [A Large-Scale Study on Unsupervised Spatiotemporal Representation Learning](https://openaccess.thecvf.com/content/CVPR2021/papers/Feichtenhofer_A_Large-Scale_Study_on_Unsupervised_Spatiotemporal_Representation_Learning_CVPR_2021_paper.pdf)
+* [2021] [Videomoco: Contrastive video representation learning with temporally adversarial examples](https://openaccess.thecvf.com/content/CVPR2021/papers/Pan_VideoMoCo_Contrastive_Video_Representation_Learning_With_Temporally_Adversarial_Examples_CVPR_2021_paper.pdf)
 * [2022] [bevt: Bert pretraining of video transformers](https://openaccess.thecvf.com/content/CVPR2022/papers/Wang_BEVT_BERT_Pretraining_of_Video_Transformers_CVPR_2022_paper.pdf)
 * [2022] [Masked Autoencoders As Spatiotemporal Learners](https://arxiv.org/abs/2205.09113)
 * [2022] [Masked Feature Prediction for Self-Supervised Visual Pre-Training](https://openaccess.thecvf.com/content/CVPR2022/papers/Wei_Masked_Feature_Prediction_for_Self-Supervised_Visual_Pre-Training_CVPR_2022_paper.pdf)
