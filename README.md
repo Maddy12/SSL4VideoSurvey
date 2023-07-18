@@ -132,8 +132,21 @@ prediction accuracy. Top scores are in **bold**. Playback speed related tasks ty
 | [VideoClip](https://aclanthology.org/2021.emnlp-main.544/) (zs) | S3D-g  | BERT      | How2            | 58.90            |
 | [MIL-NCE](https://openaccess.thecvf.com/content_CVPR_2020/papers/Miech_End-to-End_Learning_of_Visual_Representations_From_Uncurated_Instructional_Videos_CVPR_2020_paper.pdf)       | S3D      | Word2Vec  | How2            | 61.00            |
 | [VLM](https://aclanthology.org/2021.findings-acl.370/)                         | S3D-g    | BERT      | How2            | 68.39            |
-| [VideoClip](https://aclanthology.org/2021.emnlp-main.544/) (ft) | S3D-g  | BERT      | How2            | \underline{68.70} |
-| [UniVL](https://arxiv.org/abs/2002.06353)                     | S3D-g    | BERT      | How2            | \textbf{70.20}   |
+| [VideoClip](https://aclanthology.org/2021.emnlp-main.544/) (ft) | S3D-g  | BERT      | How2            | 68.70 |
+| [UniVL](https://arxiv.org/abs/2002.06353)                     | S3D-g    | BERT      | How2            | 70.20   |
+
+### Temporal Action Step Localization
+*Downstream temporal action step localization evaluation on CrossTask for models that use a contrastive multimodal self-supervised pre-training approach. Top scores are in **bold**.*
+
+
+| Model                                        | Visual                       | Text     | Pre-train     | Recall            |
+|----------------------------------------------|------------------------------|----------|---------------|-------------------|
+| [VideoClip](https://aclanthology.org/2021.emnlp-main.544/) (zs) | S3D-g                        | BERT     | How2          | 33.90             |
+| [MIL-NCE](https://openaccess.thecvf.com/content_CVPR_2020/papers/Miech_End-to-End_Learning_of_Visual_Representations_From_Uncurated_Instructional_Videos_CVPR_2020_paper.pdf)                   | S3D                          | Word2Vec | How2          | 40.50             |
+| [ActBERT](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_ActBERT_Learning_Global-Local_Video-Text_Representations_CVPR_2020_paper.pdf)                       | 3D R-32                      | BERT     | Kinetics+How2 | 41.40             |
+| [UniVL](https://arxiv.org/abs/2002.06353)                        | S3D-g                        | BERT     | How2          | 42.00             |
+| [VLM](https://aclanthology.org/2021.findings-acl.370/)                            | S3D-g                        | BERT     | How2          | 46.50 |
+| [VideoClip](https://aclanthology.org/2021.emnlp-main.544/) (ft) | S3D-g                        | BERT     | How2          | **47.30**    |
 
 
 # Evaluation Tasks
@@ -183,6 +196,32 @@ prediction accuracy. Top scores are in **bold**. Playback speed related tasks ty
 | [ActBERT](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_ActBERT_Learning_Global-Local_Video-Text_Representations_CVPR_2020_paper.pdf)     | Generative | MM            | 3D R-32| BERT  | K/H        | 5.41   | 13.30    | 30.56   | 0.65   |
 | [VLM](https://aclanthology.org/2021.findings-acl.370/)    | Generative | MM            | S3D-g  | BERT  | How2       | 12.27  | 18.22    | 41.51   | 1.39   |
 | [UniVL](https://arxiv.org/abs/2002.06353)  | Generative | MM            | S3D-g  | BERT  | How2       | 17.35  | 22.35    | 46.52   | 1.81   |
+
+## Text-to-Video Retrieval 
+*Performance for the downstream video retrieval task. Top scores for each category are in **bold**. Masked Modeling (MM) is a generative approach that uses both video with text. Cross-modal agreement include a variety of contrastive approaches that can use video with audio and/or text. Cross-modal agreement pre-training approaches typically perform best. Some models have dedicated variations in what they report with fine-tuning (*) on the target dataset, [YouCook2](http://youcook2.eecs.umich.edu) or [MSRVTT](https://www.microsoft.com/en-us/research/publication/msr-vtt-a-large-video-description-dataset-for-bridging-video-and-language/). The pre-training datasets titled COMBO are [CC3M](https://aclanthology.org/P18-1238/), [WV-2M](https://arxiv.org/abs/2104.00650) and [COCO](https://cocodataset.org/#home).*
+| Model                                      | Visual    | Text        | Pre-Train          | R@5 YouCook2   | R@5 MSRVTT   |
+|--------------------------------------------|-----------|-------------|--------------------|---------------|--------------|
+| [ActBERT](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_ActBERT_Learning_Global-Local_Video-Text_Representations_CVPR_2020_paper.pdf)                      | 3D R-32   | BERT        | Kinetics+How2      | 26.70         | 23.40        |
+| [HERO](https://aclanthology.org/2020.emnlp-main.161/)                         | SlowFast  | WordPieces  | How2+[TV](https://arxiv.org/abs/1604.06506)  | --            | 43.40        |
+| [ClipBERT](https://openaccess.thecvf.com/content/CVPR2021/papers/Lei_Less_Is_More_ClipBERT_for_Video-and-Language_Learning_via_Sparse_Sampling_CVPR_2021_paper.pdf)                    | R-50      | WordPieces  | [VisualGenome](https://arxiv.org/abs/1602.07332)  | --            | 46.80        |
+| [VLM](https://aclanthology.org/2021.findings-acl.370/)                         | S3D-g     | BERT        | How2               | 56.88         | 55.50        |
+| [UniVL](https://arxiv.org/abs/2002.06353)                     | S3D-g     | BERT        | How2               | 57.60         | 49.60        |
+| [Amrani et al.](https://arxiv.org/abs/2003.03186)           | R-152     | Word2Vec    | How2               | --            | 21.30        |
+| [MIL-NCE](https://openaccess.thecvf.com/content_CVPR_2020/papers/Miech_End-to-End_Learning_of_Visual_Representations_From_Uncurated_Instructional_Videos_CVPR_2020_paper.pdf)                   | S3D       | Word2Vec    | How2               | 38.00         | 24.00        |
+| [COOT](https://dl.acm.org/doi/10.5555/3495724.3497619)                           | S3D-g     | BERT        | How2+YouCook2      | 40.20         | --           |
+| [CE](https://arxiv.org/abs/1907.13487)*                      | Experts   | [NetVLAD](https://openaccess.thecvf.com/content_cvpr_2016/papers/Arandjelovic_NetVLAD_CNN_Architecture_CVPR_2016_paper.pdf) | MSRVTT             | --            | 29.00        |
+| [VideoClip](https://aclanthology.org/2021.emnlp-main.544/)    | S3D-g     | BERT        | How2               | 50.40         | 22.20        |
+| [VATT](https://arxiv.org/abs/2104.11178)              | Linear Proj. | Linear Proj. | AS+How2          | --            | --           |
+| [MEE](https://arxiv.org/abs/1804.02516)           | Experts   | [NetVLAD](https://openaccess.thecvf.com/content_cvpr_2016/papers/Arandjelovic_NetVLAD_CNN_Architecture_CVPR_2016_paper.pdf)  | [COCO](https://cocodataset.org/#home) | --       | 39.20        |
+| [JPoSE](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wray_Fine-Grained_Action_Retrieval_Through_Multiple_Parts-of-Speech_Embeddings_ICCV_2019_paper.pdf)                     | [TSN](https://link.springer.com/chapter/10.1007/978-3-319-46484-8_2) | Word2Vec  | Kinetics         | --            | 38.10        |
+| [Amrani et al.](https://arxiv.org/abs/2003.03186)*            | R-152     | Word2Vec    | How2               | --            | 41.60        |
+| [AVLnet](https://arxiv.org/abs/2006.09199)*           | 3D R-101  | Word2Vec    | How2               | 55.50         | 50.50        |
+| [MMT](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123490205.pdf)                    | Experts   | BERT        | How2               | --            | 14.40        |
+| [MMT](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123490205.pdf)*                      | Experts   | BERT        | How2               | --            | 55.70        |
+| [Patrick et al.](https://arxiv.org/abs/2010.02824)*  | Experts   | [T-5](https://arxiv.org/abs/1910.10683)  | How2        | 58.50         | --           |
+| [VideoClip](https://aclanthology.org/2021.emnlp-main.544/)*    | S3D-g     | BERT        | How2               | **62.60**         | 55.40        |
+| [FIT](https://arxiv.org/abs/2104.00650)                        | ViT | BERT | COMBO       | --         | **61.50**            |
+
 
 
 ## Citation
