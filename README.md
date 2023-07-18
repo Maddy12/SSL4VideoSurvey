@@ -58,7 +58,6 @@ prediction accuracy. Top scores are in **bold**. Playback speed related tasks ty
 | [PacePred](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123620494.pdf)  | Pretext      | Speed                | R(2+1)D         | UCF101              | **49.70**     | **32.20**     |
 
 ## Generative Learning
-
 ### Action Recognition
 *Downstream action recognition evaluation for models that use a generative self-supervised pre-training approach. Top scores are in **bold***
 | Model                              | Subcategory       | Visual Backbone         | Pre-train        | UCF101 | HMDB51 |
@@ -90,6 +89,16 @@ prediction accuracy. Top scores are in **bold**. Playback speed related tasks ty
 | [MemDPC-RGP](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480324.pdf)         | Generative   | Frame Prediction     | R(2+3)D         | Kinetics            | 40.40     | 25.70     |
 | [MemDPC-Flow](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480324.pdf)         | Generative   | Frame Prediction     | R(2+3)D         | Kinetics            | **63.20**     | **37.60**     |
 
+## Video Captioning
+*Downstream evaluation for video captioning on the YouCook2 dataset for video-language models. Top scores are in **bold**. MM: Masked modeling with video and text, and K/H: Kinetics+HowTo100M.*
+
+| Model                | Category      | Subcategory   | Visual | Text  | Pre-train  | BLEU4  | METEOR   | ROUGE   | CIDEr  |
+|----------------------|---------------|---------------|--------|-------|------------|--------|----------|---------|--------|
+| [VideoBert](https://openaccess.thecvf.com/content_ICCV_2019/papers/Sun_VideoBERT_A_Joint_Model_for_Video_and_Language_Representation_Learning_ICCV_2019_paper.pdf)| Generative | MM            | S3D-g  | BERT  | Kinetics   | 4.33   | 11.94    | 28.80   | 0.55   |
+| [ActBERT](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_ActBERT_Learning_Global-Local_Video-Text_Representations_CVPR_2020_paper.pdf)     | Generative | MM            | 3D R-32| BERT  | K/H        | 5.41   | 13.30    | 30.56   | 0.65   |
+| [VLM](https://aclanthology.org/2021.findings-acl.370/)    | Generative | MM            | S3D-g  | BERT  | How2       | 12.27  | 18.22    | 41.51   | 1.39   |
+| [UniVL](https://arxiv.org/abs/2002.06353)  | Generative | MM            | S3D-g  | BERT  | How2       | 17.35  | 22.35    | 46.52   | 1.81   |
+
 ## Contrastive Learning
 ### Action Recognition
 *Downstream evaluation of action recognition on  self-supervised learning measured by prediction accuracy for [Something-Something (SS)](https://developer.qualcomm.com/software/ai-datasets/something-something) and [Kinetics400 (Kinetics)](https://www.deepmind.com/open-source/kinetics). SS is a more temporally relevant dataset and therefore is more challenging.  Top scores for each category are in **bold** and second best scores \underline{underlined}.*
@@ -100,6 +109,32 @@ prediction accuracy. Top scores are in **bold**. Playback speed related tasks ty
 | [pSimCLR](https://openaccess.thecvf.com/content/CVPR2021/papers/Feichtenhofer_A_Large-Scale_Study_on_Unsupervised_Spatiotemporal_Representation_Learning_CVPR_2021_paper.pdf)      | Contrastive  | View Aug.   | [R-50](https://arxiv.org/abs/1512.03385)                | Kinetics                            | 52.0 | 62.0     |
 | [pMoCo](https://openaccess.thecvf.com/content/CVPR2021/papers/Feichtenhofer_A_Large-Scale_Study_on_Unsupervised_Spatiotemporal_Representation_Learning_CVPR_2021_paper.pdf)         | Contrastive  | View Aug.   | [R-50](https://arxiv.org/abs/1512.03385)                | Kinetics                            | 54.4 | 69.0     |
 | [pBYOL](https://openaccess.thecvf.com/content/CVPR2021/papers/Feichtenhofer_A_Large-Scale_Study_on_Unsupervised_Spatiotemporal_Representation_Learning_CVPR_2021_paper.pdf)          | Contrastive  | View Aug.   | [R-50](https://arxiv.org/abs/1512.03385)                | Kinetics                            | **55.8** | **71.5**     |
+
+## Cross-Modal Learning
+### Video Captioning
+*Downstream evaluation for video captioning on the YouCook2 dataset for video-language models. Top scores are in **bold**. MM: Masked modeling with video and text, and K/H: Kinetics+HowTo100M.*
+
+| Model                | Category      | Subcategory   | Visual | Text  | Pre-train  | BLEU4  | METEOR   | ROUGE   | CIDEr  |
+|----------------------|---------------|---------------|--------|-------|------------|--------|----------|---------|--------|
+| [CBT](https://arxiv.org/abs/1906.05743)  | Cross-Modal   | Video+Text    | S3D-G  | BERT  | Kinetics   | 5.12   | 12.97    | 30.44   | 0.64   |
+| [COOT](https://dl.acm.org/doi/10.5555/3495724.3497619)     | Cross-Modal   | Video+Text    | S3D-g  | BERT  | YouCook2   | 11.30  | 19.85    | 37.94   | --     |
+| [VideoBert](https://openaccess.thecvf.com/content_ICCV_2019/papers/Sun_VideoBERT_A_Joint_Model_for_Video_and_Language_Representation_Learning_ICCV_2019_paper.pdf)| Generative | MM            | S3D-g  | BERT  | Kinetics   | 4.33   | 11.94    | 28.80   | 0.55   |
+| [ActBERT](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_ActBERT_Learning_Global-Local_Video-Text_Representations_CVPR_2020_paper.pdf)     | Generative | MM            | 3D R-32| BERT  | K/H        | 5.41   | 13.30    | 30.56   | 0.65   |
+| [VLM](https://aclanthology.org/2021.findings-acl.370/)    | Generative | MM            | S3D-g  | BERT  | How2       | 12.27  | 18.22    | 41.51   | 1.39   |
+| [UniVL](https://arxiv.org/abs/2002.06353)  | Generative | MM            | S3D-g  | BERT  | How2       | 17.35  | 22.35    | 46.52   | 1.81   |
+
+### Action Segmentation
+*Downstream action segmentation evaluation on COIN for models that use a cross-modal agreement self-supervised pre-training approach. The top score is in **bold**.*
+| Model                                    | Visual   | Text      | Pre-train       | Frame-Acc        |
+|------------------------------------------|----------|-----------|-----------------|------------------|
+| [CBT](https://arxiv.org/abs/1906.05743)                      | S3D-G    | BERT      | Kinetics+How2   | 53.90            |
+| [ActBERT](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_ActBERT_Learning_Global-Local_Video-Text_Representations_CVPR_2020_paper.pdf)                   | 3D R-32  | BERT      | Kinetics+How2   | 56.95            |
+| [VideoClip](https://aclanthology.org/2021.emnlp-main.544/) (zs) | S3D-g  | BERT      | How2            | 58.90            |
+| [MIL-NCE](https://openaccess.thecvf.com/content_CVPR_2020/papers/Miech_End-to-End_Learning_of_Visual_Representations_From_Uncurated_Instructional_Videos_CVPR_2020_paper.pdf)       | S3D      | Word2Vec  | How2            | 61.00            |
+| [VLM](https://aclanthology.org/2021.findings-acl.370/)                         | S3D-g    | BERT      | How2            | 68.39            |
+| [VideoClip](https://aclanthology.org/2021.emnlp-main.544/) (ft) | S3D-g  | BERT      | How2            | \underline{68.70} |
+| [UniVL](https://arxiv.org/abs/2002.06353)                     | S3D-g    | BERT      | How2            | \textbf{70.20}   |
+
 
 # Evaluation Tasks
 ## Action Recognition (Kinetics and SS)
@@ -136,6 +171,19 @@ prediction accuracy. Top scores are in **bold**. Playback speed related tasks ty
 | [SeLaVi](https://arxiv.org/pdf/2006.13662.pdf)           | Cross-Modal  | Video+Audio          | R(2+1)D         | Kinetics            | 68.60     | 47.60     |
 | [CoCLR](https://proceedings.neurips.cc/paper/2020/file/3def184ad8f4755ff269862ea77393dd-Paper.pdf)   | Contrastive  | View Augmentation    | S3D-G           | UCF101              | 70.80     | 45.80     |
 | [GDT](https://arxiv.org/abs/2003.04298)            | Cross-Modal  | Video+Audio          | R(2+1)D         | Kinetics            | **79.00**    | **51.70**     |
+
+## Video Captioning
+*Downstream evaluation for video captioning on the YouCook2 dataset for video-language models. Top scores are in **bold**. MM: Masked modeling with video and text, and K/H: Kinetics+HowTo100M.*
+
+| Model                | Category      | Subcategory   | Visual | Text  | Pre-train  | BLEU4  | METEOR   | ROUGE   | CIDEr  |
+|----------------------|---------------|---------------|--------|-------|------------|--------|----------|---------|--------|
+| [CBT](https://arxiv.org/abs/1906.05743)  | Cross-Modal   | Video+Text    | S3D-G  | BERT  | Kinetics   | 5.12   | 12.97    | 30.44   | 0.64   |
+| [COOT](https://dl.acm.org/doi/10.5555/3495724.3497619)     | Cross-Modal   | Video+Text    | S3D-g  | BERT  | YouCook2   | 11.30  | 19.85    | 37.94   | --     |
+| [VideoBert](https://openaccess.thecvf.com/content_ICCV_2019/papers/Sun_VideoBERT_A_Joint_Model_for_Video_and_Language_Representation_Learning_ICCV_2019_paper.pdf)| Generative | MM            | S3D-g  | BERT  | Kinetics   | 4.33   | 11.94    | 28.80   | 0.55   |
+| [ActBERT](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_ActBERT_Learning_Global-Local_Video-Text_Representations_CVPR_2020_paper.pdf)     | Generative | MM            | 3D R-32| BERT  | K/H        | 5.41   | 13.30    | 30.56   | 0.65   |
+| [VLM](https://aclanthology.org/2021.findings-acl.370/)    | Generative | MM            | S3D-g  | BERT  | How2       | 12.27  | 18.22    | 41.51   | 1.39   |
+| [UniVL](https://arxiv.org/abs/2002.06353)  | Generative | MM            | S3D-g  | BERT  | How2       | 17.35  | 22.35    | 46.52   | 1.81   |
+
 
 ## Citation
 ```
