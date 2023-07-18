@@ -1,4 +1,4 @@
-# Pretext Self-Supervised Learning
+# Pretext Learning
 * [2016] [Shuffle and Learn: Unsupervised Learning Using Temporal Order Verification](https://link.springer.com/chapter/10.1007/978-3-319-46448-0_32)
 * [2017] [Unsupervised Representation Learning by Sorting Sequences](https://openaccess.thecvf.com/content_ICCV_2017/papers/Lee_Unsupervised_Representation_Learning_ICCV_2017_paper.pdf)
 * [2017] [Self-Supervised Video Representation Learning With Odd-One-Out Networks](https://openaccess.thecvf.com/content_cvpr_2017/papers/Fernando_Self-Supervised_Video_Representation_CVPR_2017_paper.pdf)
@@ -21,15 +21,29 @@
 * [2021] [Self-Supervised Video Representation Learning with Constrained Spatiotemporal Jigsaw](https://www.ijcai.org/proceedings/2021/104)
 * [2021] [Enhancing unsupervised video representation learning by decoupling the scene and the motion](https://arxiv.org/abs/2009.05757)
 
-# Generative Tasks
+# Generative Learning
 * [2016] [Deep multi-scale video prediction beyond mean square error](https://arxiv.org/abs/1511.05440)
 * [2016] [Generating videos with scene dynamics](https://dl.acm.org/doi/pdf/10.5555/3157096.3157165)
 * [2017] [Dual Motion GAN for Future-Flow Embedded Video Prediction](https://openaccess.thecvf.com/content_ICCV_2017/papers/Liang_Dual_Motion_GAN_ICCV_2017_paper.pdf)
+* [2019] [Learning Video Representations using Contrastive Bidirectional Transformer](https://arxiv.org/abs/1906.05743)
+* [2019] [VideoBERT: A joint model for video and language representation learning](https://openaccess.thecvf.com/content_ICCV_2019/papers/Sun_VideoBERT_A_Joint_Model_for_Video_and_Language_Representation_Learning_ICCV_2019_paper.pdf)
 * [2020] [Self-supervised motion representation via scattering local motion cues](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123590069.pdf)
+* [2020] [UniVL: A unified video and language pre-training model for multimodal understanding and generation](https://arxiv.org/abs/2002.06353)
 * [2021] [A Large-Scale Study on Unsupervised Spatiotemporal Representation Learning](https://openaccess.thecvf.com/content/CVPR2021/papers/Feichtenhofer_A_Large-Scale_Study_on_Unsupervised_Spatiotemporal_Representation_Learning_CVPR_2021_paper.pdf)
 * [2021] [Videomoco: Contrastive video representation learning with temporally adversarial examples](https://openaccess.thecvf.com/content/CVPR2021/papers/Pan_VideoMoCo_Contrastive_Video_Representation_Learning_With_Temporally_Adversarial_Examples_CVPR_2021_paper.pdf)
+* [2021] [VLM: Task-agnostic Video-Language Model Pre-training for Video Understanding](https://aclanthology.org/2021.findings-acl.370/)
 * [2022] [bevt: Bert pretraining of video transformers](https://openaccess.thecvf.com/content/CVPR2022/papers/Wang_BEVT_BERT_Pretraining_of_Video_Transformers_CVPR_2022_paper.pdf)
 * [2022] [Masked Autoencoders As Spatiotemporal Learners](https://arxiv.org/abs/2205.09113)
 * [2022] [Masked Feature Prediction for Self-Supervised Visual Pre-Training](https://openaccess.thecvf.com/content/CVPR2022/papers/Wei_Masked_Feature_Prediction_for_Self-Supervised_Visual_Pre-Training_CVPR_2022_paper.pdf)
 * [2022] [Video{MAE}: Masked Autoencoders are Data-Efficient Learners for Self-Supervised Video Pre-Training](https://arxiv.org/abs/2203.12602)
 * [2022] [Self-supervised Video Representation Learning with Motion-Aware Masked Autoencoders](https://arxiv.org/abs/2210.04154)
+
+# Cross-Modal Learning
+* [2019] [Learning Video Representations using Contrastive Bidirectional Transformer](https://arxiv.org/abs/1906.05743)
+* [2019] [VideoBERT: A joint model for video and language representation learning](https://openaccess.thecvf.com/content_ICCV_2019/papers/Sun_VideoBERT_A_Joint_Model_for_Video_and_Language_Representation_Learning_ICCV_2019_paper.pdf)
+* [2020] [End-to-end learning of visual representations from uncurated instructional videos](https://openaccess.thecvf.com/content_CVPR_2020/papers/Miech_End-to-End_Learning_of_Visual_Representations_From_Uncurated_Instructional_Videos_CVPR_2020_paper.pdf)
+* [2020] [COOT: Cooperative hierarchical transformer for video-text representation learning](https://dl.acm.org/doi/10.5555/3495724.3497619)
+* [2020] [ActBERT: Learning global-local video-text representations](https://openaccess.thecvf.com/content_CVPR_2020/papers/Zhu_ActBERT_Learning_Global-Local_Video-Text_Representations_CVPR_2020_paper.pdf)
+* [2020] [UniVL: A unified video and language pre-training model for multimodal understanding and generation](https://arxiv.org/abs/2002.06353)
+* [2021] [VLM: Task-agnostic Video-Language Model Pre-training for Video Understanding](https://aclanthology.org/2021.findings-acl.370/)
+* [2021] [VideoCLIP: Contrastive pre-training for zero-shot video-text understanding](https://aclanthology.org/2021.emnlp-main.544/)
