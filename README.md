@@ -22,7 +22,7 @@ different modalities: video-only (V), video-text (V+T), video-audio (V+A), video
 recently, contrastive learning has become the most popular strategy.*
 
 # Training Tasks
-## Pre-Text Tasks
+## Pre-Text Learning
 ### Action Recognition
 *Downstream evaluation of action recognition on pretext self-supervised learning measured by
 prediction accuracy. Top scores are in **bold**. Playback speed related tasks typically perform the best.*
@@ -57,9 +57,22 @@ prediction accuracy. Top scores are in **bold**. Playback speed related tasks ty
 | [Jenni et al.](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123730426.pdf)| Pretext      | Speed                | 3D R-18         | Kinetics            | 48.50     | --        |
 | [PacePred](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123620494.pdf)  | Pretext      | Speed                | R(2+1)D         | UCF101              | **49.70**     | **32.20**     |
 
-## Generative Tasks
+## Generative Learning
 
 ### Action Recognition
+*Downstream action recognition evaluation for models that use a generative self-supervised pre-training approach. Top scores are in **bold***
+| Model                              | Subcategory       | Visual Backbone         | Pre-train        | UCF101 | HMDB51 |
+|------------------------------------|-------------------|-------------------------|------------------|--------|--------|
+| [Mathieu et al.](https://arxiv.org/abs/1511.05440)  | Frame Prediction  | C3D                     | Sports1M          | 52.10  | --     |
+| [VideoGan](https://dl.acm.org/doi/pdf/10.5555/3157096.3157165) | Reconstruction    | VAE                     | Flickr            | 52.90  | --     |
+| [Liang et al.](https://openaccess.thecvf.com/content_ICCV_2017/papers/Liang_Dual_Motion_GAN_ICCV_2017_paper.pdf)          | Frame Prediction  | LSTM                    | UCF101            | 55.10  | --     |
+| [VideoMoCo](https://openaccess.thecvf.com/content/CVPR2021/papers/Pan_VideoMoCo_Contrastive_Video_Representation_Learning_With_Temporally_Adversarial_Examples_CVPR_2021_paper.pdf)          | Frame Prediction  | R(2+1)D                 | Kinetics          | 78.70  | 49.20  |
+| [MemDPC-Dual](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123480324.pdf)             | Frame Prediction  | R(2+3)D                 | Kinetics          | 86.10  | 54.50  |
+| [Tian et al.](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123590069.pdf)          | Reconstruction    | 3D R-101                | Kinetics          | 88.10  | 59.00  |
+| [VideoMAE](https://arxiv.org/abs/2203.12602)     | [MAE](https://arxiv.org/abs/2205.09113)               | [ViT-L](https://arxiv.org/abs/2010.11929) | ImageNet  | 91.3   | 62.6   |
+| [MotionMAE](https://arxiv.org/abs/2210.04154)          | [MAE](https://arxiv.org/abs/2205.09113)               | [ViT-B](https://arxiv.org/abs/2010.11929) | Kinetics  | 96.3   | --     |
+
+
 *Downstream evaluation of action recognition on  self-supervised learning measured by prediction accuracy for [Something-Something (SS)](https://developer.qualcomm.com/software/ai-datasets/something-something) and [Kinetics400 (Kinetics)](https://www.deepmind.com/open-source/kinetics). SS is a more temporally relevant dataset and therefore is more challenging.  Top scores for each category are in **bold** and second best scores \underline{underlined}.*
 
 | Model                                          | Category     | Subcategory | Visual Backbone      | Pre-Train                           | SS   | Kinetics |
