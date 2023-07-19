@@ -343,6 +343,23 @@ prediction accuracy. Top scores are in **bold**. Playback speed related tasks ty
 | [VideoClip](https://aclanthology.org/2021.emnlp-main.544/)*    | S3D-g     | BERT        | How2               | **62.60**         | 55.40        |
 | [FIT](https://arxiv.org/abs/2104.00650)                        | ViT | BERT | COMBO       | --         | **61.50**            |
 
+# Datasets
+| Dataset                                   | Labels          | Modalities      | Classes | Videos   | Tasks                                       |
+|-------------------------------------------|-----------------|-----------------|---------|----------|---------------------------------------------|
+| [ActivityNet](http://activity-net.org) (ActN) | Activity, Captions, Bounding Box        | Video, Video+Text           | 200     | 19,995   | Action-Recognition, [Video Captioning](https://openaccess.thecvf.com/content_ICCV_2017/papers/Krishna_Dense-Captioning_Events_in_ICCV_2017_paper.pdf), [Video Grounding](https://openaccess.thecvf.com/content_CVPR_2019/papers/Zhou_Grounded_Video_Description_CVPR_2019_paper.pdf)                     
+| [AVA](https://research.google.com/ava/)           | Activity, Face Tracks        | Video, Video+Audio           | 80      | 430      | Action-Recognition,[Audio-Visual Grounding](https://ieeexplore.ieee.org/document/9053900)                       |
+| [Breakfast](https://serre-lab.clps.brown.edu/resource/breakfast-actions-dataset/)     | Activity        | Video           | 10      | 1,989    | Action Recognition, Action Segmentation                         |
+| [Charades](https://prior.allenai.org/projects/charades)   | Activity, Objects, Indoor Scenes, Verbs        | Video           | 157     | 9,848    | Action-Recognition, Object Recognition, Scene Recognition, Temporal Action Step Localization                          |
+| [COIN](https://coin-dataset.github.io)                | Activity, Temporal Actions, ASR        | Video, Video+Text           | 180     | 11,827   | Action-Recognition, Action Segmentation, Video-Retrieval                          |
+| [CrossTask](https://github.com/DmZhukov/CrossTask)        | Temporal Steps, Activity  | Video           | 83      | 4,700    | Temporal Action Step Localization, Recognition           |
+| [HMDB51](https://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/)            | Activity        | Video           | 51      | 6,849    | Action-Recognition, Video-Retrieval                          |
+| [HowTo100M](https://www.di.ens.fr/willow/research/howto100m/) (How2)         | ASR             | Video+Text      | -       | 136M     | Text-to-Video Retrieval, [VideoQA](https://value-benchmark.github.io)                    |
+| [Kinetics](https://www.deepmind.com/open-source/kinetics)       | Activity        | Video           | 400/600/700 | 1/2 M | Action-Recognition                    |
+| [MSRVTT](https://github.com/crux82/msr-vtt-it)                | Activity, Captions                 | Video+Text      | 20      | 10,000   | Action-Recognition, Video-Captioning, Video-Retrieval, Visual-Question Answering                          |
+| [MultiThumos](https://ai.stanford.edu/~syyeung/everymoment.html)      | Activity, Temporal Steps        | Video           | 65      | 400      | Action Recognition, Temporal Action Step Localization                          |
+| [UCF101](https://www.crcv.ucf.edu/data/UCF101.php)          | Activity        | Video           | 101     | 13,320   | Recognition, Video-Retrieval                                  |
+| [YouCook2](http://youcook2.eecs.umich.edu)        | Captions        | Video+Text      | 89      | 2,000    | Video Captioning,  Video-Retrieval                            |
+| [YouTube-8M](https://research.google.com/youtube8m/)| Activity        | Video           | 4,716   | 8M       | Action Recognition                          |
 
 
 ## Citation
