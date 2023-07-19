@@ -364,7 +364,7 @@ prediction accuracy. Top scores are in **bold**. Playback speed related tasks ty
 
 ## Citation
 ```
-@article{10.1145/3577925,
+@article{schiappa_survey_ssl_video,
 author = {Schiappa, Madeline C. and Rawat, Yogesh S. and Shah, Mubarak},
 title = {Self-Supervised Learning for Videos: A Survey},
 year = {2023},
